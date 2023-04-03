@@ -40,7 +40,46 @@ If you are responsible for, or involved with:
 
 We also host sponsors to promote the latest advances in security technology relevant to application security and developers.   
 
+{% if site.data.sponsors.diamond %}
 
+Diamond Sponsor
+{% for sponsor in site.data.sponsors.diamond %} {% if sponsor.image == blank %}
+{{ sponsor.name }}
+
+{% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.platinum %}
+
+Platinum Sponsor
+{% for sponsor in site.data.sponsors.platinum %} {% if sponsor.image == blank %}
+{{ sponsor.name }}
+
+{% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.gold %}
+
+Gold Sponsors
+{% for sponsor in site.data.sponsors.gold %} {% if sponsor.image == %} {{ sponsor.name }} {% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.silver %}
+
+Silver Sponsors
+{% for sponsor in site.data.sponsors.silver %} {% if sponsor.image == %} {{ sponsor.name }} {% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.bronze %}
+
+Bronze Sponsors
+{% for sponsor in site.data.sponsors.bronze %} {% if sponsor.image == %} {{ sponsor.name }} {% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.community %} ####### Community Supporters
+
+{% for sponsor in site.data.sponsors.community %} {% if sponsor.image == %} {{ sponsor.name }} {% else %}  {% endif %} {% endfor %}
+{% endif %}
+{% if site.data.sponsors.alacarte %} ####### A La Carte Sponsorships
+
+{% for sponsor in site.data.sponsors.alacarte %} {{ sponsor.type }}
+{% if sponsor.image == %} {{ sponsor.name }} {% else %}  {% endif %} {% endfor %}
+{% endif %}
 
 {% comment %}
 {% include keynotes.md %}
